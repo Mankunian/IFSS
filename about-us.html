@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en" class=" js no-touch">
+<head>
+    <title>About-us</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,600|Raleway:600,300|Josefin+Slab:400,700,600italic,600,400italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/slick-team-slider.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+
+    <!--FONTS LIBRARY START -->
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Archivo+Black|Quicksand" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <!--FONTS LIBRARY END -->
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/tabs.js"></script>
+
+
+
+    <style>
+        #jumbotron {
+            border: 1px solid;
+            border-radius: 2px;
+            width: 37%;
+            background: #005bab;
+            border-color: #005bab;
+            margin-top: -14px;
+            margin-left: 15px;
+            padding: 20px 5px 15px 35px;
+            font-size: 47px;
+
+        }
+
+        #banner1 {
+            background: url('img/about.jpg') no-repeat;
+            background-size: cover;
+
+            height: 600px;
+            width: 100%;
+        }
+
+        #banner-description {
+            font: 700 20px 'Lato', sans-serif;
+            text-align: center;
+            color: #fff;
+            font-size: 20px;
+        }
+
+        #FAQ {
+            text-align: center;
+            text-transform: uppercase;
+            font-family: 'Poiret One', cursive;
+            font-size: 5.5em;
+            color: #ffffff;
+        }
+        #banner-description1 {
+            font: 700 20px 'Lato', sans-serif;
+            text-align: left;
+            color: #fff;
+            margin-top: 35px;
+            margin-left: 50px;
+            font-size: 24px;
+        }
+
+        #banner-border {
+            border: 1px solid;
+            border-radius: 3px;
+            width: 602px;
+            background: #fff;
+            height: 400px;
+            margin-left: 15px;
+        }
+
+        .button {
+
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        .info-block {
+            border: 1px solid;
+            border-radius: 5px;
+            background-color: #e4eef4;
+            display: flex;
+            padding: 15px;
+            border-color: #e4eef4 ;
+            width: 62.5%;
+
+        }
+
+        .info {
+            margin-left: 40px;
+            display: none;
+        }
+
+        .text {
+            line-height: 180%;
+            text-align: left;
+        }
+
+        .hr {
+            background: #d2d2d2;
+            border: none;
+            clear: both;
+            height: 1px;
+            margin: 2em 0;
+            padding: 0;
+            width: 90%;
+        }
+        .button {
+            border-radius: 50px;
+            margin-top: 25px;
+            background-color: #2b6aff;
+            color: #ffffff
+        }
+        .button:hover {
+            background-color: #15114a;
+            color: #ffffff
+        }
+
+
+    </style>
+
+</head>
+<script>
+    function failed(e) {
+        // video playback failed - show a message saying why
+        switch (e.target.error.code) {
+            case e.target.error.MEDIA_ERR_ABORTED:
+                alert('You aborted the video playback.');
+                break;
+            case e.target.error.MEDIA_ERR_NETWORK:
+                alert('A network error caused the video download to fail part-way.');
+                break;
+            case e.target.error.MEDIA_ERR_DECODE:
+                alert('The video playback was aborted due to a corruption problem or because the video used features your browser did not support.');
+                break;
+            case e.target.error.MEDIA_ERR_SRC_NOT_SUPPORTED:
+                alert('The video could not be loaded, either because the server or network failed or because the format is not supported.');
+                break;
+            default:
+                alert('An unknown error occurred.');
+                break;
+        }
+    }
+</script>
+
+<script>
+    $(document).ready(function() { // Ждём загрузки страницы
+        $(".tabs_menu li").click(function() { // Событие нажатия на элемент меню вкладок
+            if (!$(this).hasClass("active")) { // Проверка, не нажали ли мы на уже активный пункт
+                var i = $(this).index(); // Получаем порядковый номер нажатого пункта, отстче идет от 0 (0,1,2)
+                $(".tabs_menu li.active").removeClass("active"); // Удаляем активный класс у прошлого пункта меню
+                $(".tabs .active").hide().removeClass("active"); // Скрываем и удаляем активный класс у прошлого контейнера с содержимым
+                $(this).addClass("active"); // Добавляем нажатому пункту меню активный класс
+                $($(".tabs").children(".info")[i]).fadeIn(1000).addClass("active"); // Показываем и добавляем активный класс соответствующему контейнеру
+            }
+        });
+    });
+</script>
+
+<body>
+<!--HEADER START-->
+<div class="main-navigation navbar-fixed-top">
+    <nav class="navbar navbar-default" style="padding-bottom: 7px">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!--<a href="index.html"> <img src="img/header_logo.png" width="150px"></a>-->
+                <a href="index.html"> <img src="img/logo.png" style="width: 55px; margin-top: -12px"></a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="active"><a href="about-us.html">About us</a></li>
+                    <li><a href="FAQ.html">FAQ</a></li>
+                    <li><a href="contact-us.html">Contact us</a></li>
+                    <!--<ul class="nav navbar-nav navbar-right">
+                         <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">  Academics <span class="caret"></span></a>
+                            <ul class="dropdown-menu dropdown-cart" role="menu" style="margin-top: 5px">
+                                  <li><a class="text-center" href="english.html">English Language</a></li>
+                                <li><a class="text-center" href="debate.html">Debate</a></li>
+                                <li><a class="text-center" href="leader.html">Youth leadership</a></li>
+                            </ul>
+                        </li>
+                     </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                         <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">  Electives <span class="caret"></span></a>
+                            <ul class="dropdown-menu dropdown-cart" role="menu" style="margin-top: 5px">
+                                  <li><a class="text-center" href="tennis.html">Tennis</a></li>
+                                <li><a class="text-center" href="film.html">Film</a></li>
+                                <li><a class="text-center" href="photo.html">Photography</a></li>
+                            </ul>
+                        </li>
+                     </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                         <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">  Activities <span class="caret"></span></a>
+                            <ul class="dropdown-menu dropdown-cart" role="menu" style="margin-top: 5px">
+                                  <li><a class="text-center" href="entertainment.html">Evening entertainment</a></li>
+                                <li><a class="text-center" href="trips.html">Day trips</a></li>
+                                <li><a class="text-center" href="games.html">Highland games</a></li>
+                            </ul>
+                        </li>
+                     </ul>-->
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+<!--HEADER END-->
+
+<!--BANNER START-->
+<div id="banner1" class="section-padding">
+    <!--<div class="container-fluid">
+        <div class="row">
+            <div class="jumbotron">
+                <h1 id="jumbotron" style="font-family: 'Poiret One', cursive;" class="small">ACTIVITIES <br><span style="font-family: 'Archivo Black', sans-serif; " class="bold">Day trips</span></h1>
+            </div>
+        </div>
+    </div>-->
+</div>
+<!--BANNER END-->
+
+<div class="container-fluid" style="background-color: #35c6d1; height: 200px">
+    <h3 id="FAQ">About us</h3>
+    <p id="banner-description">
+        IFSS offers 13 to 18 year olds a balanced summer experience of academia, fun and culture, where students can learn within an encouraging and supportive environment while having fun and making new friends from around the world.
+    </p>
+</div>
+
+
+<div class="container-fluid">
+    <div class="row" style=" margin-left: 25px; margin-bottom: 35px">
+        <h2 style="font: normal 45px 'Lato', Verdana, sans-serif; margin-bottom: 15px">About IFSS</h2>
+        <h4 class="text">IFSS was created with one clear mission in mind: To create an ecosystem for people to unleash their potential. As such, we provide a well balanced, supervised summer program where students choose academic and elective classes to suit their needs and wider interests. We offer our students the opportunity to have the summer adventure of a lifetime where the focus is on personal safety and wellbeing, quality individual instruction and a unique international experience.</h4>
+        <h4 class="text">The location of our summer school has been carefully chosen for its safe, stimulating and inspirational campus. Young and modern Nazarbayev University allows students to experience life at this exclusive university, within a secure environment. By attending IFSS, students have the opportunity to experience the Astana – heart of the Eurasia and home of pink flamingos.</h4>
+        <h4 class="text">IFSS endeavor to deliver the highest quality programs in the safest location led by an inspirational team. We welcome students from all over the World and create an international family where friendships span the world and last long beyond the summer»</h4>
+    </div>
+
+    <!--<iframe style="margin-left: 12%;" width="70%" height="450px"   src="https://www.youtube.com/embed/JzjvrlWV1Gw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>-->
+    <hr class="hr">
+
+    <div class="col-md-10">
+        <h2 style="font: normal 45px 'Lato', Verdana, sans-serif; margin-bottom: 15px">What Makes IFSS Different?</h2>
+        <ul style="line-height: 180%; font-size: 18px">
+            <li>We welcome students from all over the world</li>
+            <li>Beautiful, safe and world renowned locations</li>
+            <li>Satisfaction rate is 87%</li>
+            <li>Well supervised and cultural experience</li>
+            <li>Academics and Electives are taught by fully qualified professionals</li>
+            <li>IFSS gives students the edge when applying to university</li>
+
+        </ul>
+        <!--<div style="margin-left: 15px">
+            <a href="mission.html"> <button class="btn btn-primary btn-md">Our mission & values</button></a>
+            <a href="FAQ.html"> <button class="btn btn-primary btn-md">Our founder at tedx</button></a>
+        </div>-->
+        <hr class="hr">
+    </div>
+
+
+
+    <div class="col-md-10">
+        <h2 style="font: normal 45px 'Lato', Verdana, sans-serif; margin-bottom: 15px">Our Team </h2>
+        <h4 class="text">We strive for high-quality program and have selected a strong team consisting of The Princeton Review Certified Trainers, students and alumni of top Kazakhstan and U.S. schools, such as Nazarbayev University, Eurasian National University, Stanford, Duke, MIT, Williams College, Pennsylvania StateUniversity and University of Wisconsin-Madison. There is a staff student ratio of 1:12 and classes are intentionally kept small in order to provide individual attention and personalized instruction.</h4>
+        <h4 class="text">As well as providing high quality academic standards for our summer students, our teachers are also dormitory residents and are backed up by counselors who act as role models and provide pastoral care. The success of our summer programs rests on the dedication and enthusiasm of our teachers and counselors and their common goal of making IFSS a truly unique and exciting experience for every student.</h4>
+        <h4 class="text">We also have an amazing full time head office team who spend the year making sure that IFSS really is The Experience of a Lifetime.</h4>
+        <!--<div>
+            <a href="FAQ.html"> <button class="btn btn-primary btn-md">Meet the teem</button></a>
+        </div>-->
+        <!--<hr class="hr">-->
+    </div>
+
+
+
+
+
+   <!-- <div class="col-md-8">
+        <h2 style="font: normal 45px 'Lato', Verdana, sans-serif; margin-bottom: 15px">ISSOS Brochure </h2>
+        <h4 class="text">Why not download our brochure, you will find lots of information about ISSOS and discover why our students and staff have The Experience of a Lifetime, each summer.
+        </h4>
+        <div >
+            <a href="FAQ.html"> <button class="btn btn-primary btn-md">Download our brochure</button></a>
+        </div>
+
+    </div>
+
+   <div class="row">
+       <div class="col-md-4">
+           <a href="brochure.html"><img src="img/brochure.jpg" style="width: 145px; height: 210px" alt=""></a>
+       </div>
+   </div>-->
+    <hr class="hr">
+    <div>
+        <a target="_blank" href="https://docs.google.com/a/fizmat.kz/forms/d/12tJDlYFGEC_wJeSUxGujFoRiKz2HFCECuLtj9tZnf3g/edit?usp=drive_web"><button class="btn btn-primary btn-md">APPLY ONLINE</button></a>
+        <!--<a href="FAQ.html"> <button class="btn btn-primary btn-md">ASK A QUESTION</button></a>-->
+    </div>
+    <br>
+</div>
+<!--CTA2 start-->
+<div class="cta2" style="background: #e7e7e7; padding: 0; ">
+    <div class="container" >
+        <div class="col-md-3 col-sm-6">
+            <h1 style="text-transform: uppercase; font-family: courier new;"  class="advanced-chunk-title">Academics</h1>
+            <ul style="margin-bottom: 20px;">
+                <li style="text-align: left; list-style: none;">
+                    <p><a href="#">3D Modelling/Robotics</a></p>
+                    <p><a href="#">Machine Learning</a></p>
+                    <p><a href="#">App Development</a></p>
+                    <p><a href="#">SAT Reasoning</a></p>
+                    <p><a href="#">IELTS/TOEFL</a></p>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-3 col-sm-6" >
+            <h1 style="text-transform: uppercase; font: normal 17px; font-family: courier new" class="advanced-chunk-title">Electives</h1>
+            <ul style="margin-bottom: 20px;">
+                <li style="text-align: left; list-style: none;">
+                    <p><a href="#">Equestrian </a></p>
+                    <p><a href="#">Archery</a></p>
+                    <p><a href="film.html">Theatre</a></p>
+                    <p><a href="#">Public Speaking</a></p>
+                    <p><a href="tennis.html">Tennis</a></p>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <h1 style="text-transform: uppercase; font: normal 17px; font-family: courier new" class="advanced-chunk-title">Activities</h1>
+            <ul style="margin-bottom: 20px;">
+                <li style="text-align: left; list-style: none;">
+                    <p><a href="#">Home of pink flamingos</a></p>
+                    <p><a href="#">The biggest tent in the World</a></p>
+                    <p><a href="#">Burabai Resort</a></p>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <h1 style="text-transform: uppercase; font: normal 17px; font-family: courier new" class="advanced-chunk-title">Navigation</h1>
+            <ul style="margin-bottom: 20px;">
+                <li style="text-align: left; list-style: none;">
+                    <p><a href="index.html">Home</a></p>
+                    <p><a href="about-us.html">About us</a></p>
+                    <p><a href="FAQ.html">FAQ</a></p>
+                    <p><a href="contact-us.html">Contact-us</a></p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--CTA2 END-->
+
+<!--FOOTER START-->
+<footer class="footer section-padding" style="background: url(./img/footer.jpg); position: relative; background-size: cover;">
+    <div class="container">
+        <a href="index.html"> <img style="padding-top: 20px; padding-bottom: 20px; width: 150px; margin-left: 40%" src="img/n1.png"></a>
+        <div class="social-icons" >
+            <div class="col-md-12 col-xs-12 " >
+                <a style="color: white;" class="item fa fa-map" href="#"><b style="font-size: 20px;">Our Brochure</b></a>
+                <a style="color: white;" class="item fa fa-camera" href="#"><b style="font-size: 20px;">Photo Gallery</b></a>
+                <a style="color: white;" class="item fa fa-play-circle" href="#"><b style="font-size: 20px;">Video Gallery</b></a>
+                <a style="color: white;" class="item fa fa-shopping-bag" href="#"><b style="font-size: 20px;">Merchandise</b></a>
+                <a style="color: white;" class="item fa fa-calendar" href="#"><b style="font-size: 20px;">Date & Costs</b></a>
+                <hr>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--FOOTER END-->
+
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.easing.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.mixitup.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/slick.min.js"></script>
+<script type="text/javascript" src="js/custom.js"></script>
+<script src="contactform/contactform.js"></script>
+
+
+</body>

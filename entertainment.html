@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en" class=" js no-touch">
+<head>
+    <title>Evening entertainment</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,600|Raleway:600,300|Josefin+Slab:400,700,600italic,600,400italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/slick-team-slider.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+
+    <!--FONTS LIBRARY START -->
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Archivo+Black|Quicksand" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <!--FONTS LIBRARY END -->
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/tabs.js"></script>
+
+
+
+    <style>
+        #jumbotron {
+            border: 1px solid;
+            border-radius: 2px;
+            width: 46%;
+            background: #005bab;
+            border-color: #005bab;
+            margin-top: -14px;
+            margin-left: 15px;
+            padding: 20px 5px 15px 35px;
+            font-size: 47px;
+
+        }
+
+        #banner1 {
+            background: url('img/even-banner.png') no-repeat;
+            background-size: cover;
+
+            height: 600px;
+            width:100%;
+        }
+
+        #banner-description {
+            font: 700 20px 'Lato', sans-serif;
+            text-align: center;
+            color: #fff;
+            margin-top: 35px;
+            font-size: 30px;
+        }
+
+        #banner-border {
+            border: 1px solid;
+            border-radius: 3px;
+            width: 602px;
+            background: #fff;
+            height: 400px;
+            margin-left: 15px;
+        }
+
+        .button {
+
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        .info-block {
+            border: 1px solid;
+            border-radius: 5px;
+            background-color: #e4eef4;
+            display: flex;
+            padding: 15px;
+            border-color: #e4eef4 ;
+            width: 62.5%;
+
+        }
+
+        .info {
+            margin-left: 40px;
+            display: none;
+        }
+
+        .text {
+            line-height: 180%;
+            text-align: left;
+        }
+
+        .hr {
+            background: #d2d2d2;
+            border: none;
+            clear: both;
+            height: 1px;
+            margin: 2em 0;
+            padding: 0;
+            width: 98%;
+        }
+
+
+    </style>
+
+</head>
+<script>
+    function failed(e) {
+        // video playback failed - show a message saying why
+        switch (e.target.error.code) {
+            case e.target.error.MEDIA_ERR_ABORTED:
+                alert('You aborted the video playback.');
+                break;
+            case e.target.error.MEDIA_ERR_NETWORK:
+                alert('A network error caused the video download to fail part-way.');
+                break;
+            case e.target.error.MEDIA_ERR_DECODE:
+                alert('The video playback was aborted due to a corruption problem or because the video used features your browser did not support.');
+                break;
+            case e.target.error.MEDIA_ERR_SRC_NOT_SUPPORTED:
+                alert('The video could not be loaded, either because the server or network failed or because the format is not supported.');
+                break;
+            default:
+                alert('An unknown error occurred.');
+                break;
+        }
+    }
+</script>
+
+<script>
+    $(document).ready(function() { // Ждём загрузки страницы
+        $(".tabs_menu li").click(function() { // Событие нажатия на элемент меню вкладок
+            if (!$(this).hasClass("active")) { // Проверка, не нажали ли мы на уже активный пункт
+                var i = $(this).index(); // Получаем порядковый номер нажатого пункта, отстче идет от 0 (0,1,2)
+                $(".tabs_menu li.active").removeClass("active"); // Удаляем активный класс у прошлого пункта меню
+                $(".tabs .active").hide().removeClass("active"); // Скрываем и удаляем активный класс у прошлого контейнера с содержимым
+                $(this).addClass("active"); // Добавляем нажатому пункту меню активный класс
+                $($(".tabs").children(".info")[i]).fadeIn(1000).addClass("active"); // Показываем и добавляем активный класс соответствующему контейнеру
+            }
+        });
+    });
+</script>
+
+<body>
+<!--HEADER START-->
+<div class="main-navigation navbar-fixed-top">
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="index.html"> <img src="img/header_logo.png" width="150px"></a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about-us.html">About us</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">  Academics<span class="caret"></span></a>
+                            <ul class="dropdown-menu dropdown-cart" role="menu">
+                                <li><a class="text-center" href="english.html">English Language</a></li>
+                                <li><a class="text-center" href="debate.html">Debate</a></li>
+                                <li><a class="text-center" href="leader.html">Youth leadership</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">  Electives<span class="caret"></span></a>
+                            <ul class="dropdown-menu dropdown-cart" role="menu">
+                                <li><a class="text-center" href="tennis.html">Tennis</a></li>
+                                <li><a class="text-center" href="film.html">Film</a></li>
+                                <li><a class="text-center" href="photo.html">Photography</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">  Activities<span class="caret"></span></a>
+                            <ul class="dropdown-menu dropdown-cart" role="menu">
+                                <li><a class="text-center" href="trips.html">Day trips</a></li>
+                                <li><a class="text-center" href="entertainment.html">Evening entertainment</a></li>
+                                <li><a class="text-center" href="games.html">Highland games</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+<!--HEADER END-->
+
+<!--BANNER START-->
+<div id="banner1" class="section-padding">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="jumbotron">
+                <h1 id="jumbotron" style="font-family: 'Poiret One', cursive;" class="small">ACTIVITIES <br><span style="font-family: 'Archivo Black', sans-serif; " class="bold">Evening entertainment</span></h1>
+            </div>
+        </div>
+    </div>
+</div>
+<!--BANNER END-->
+
+<div class="container-fluid" style="background-color: #35c6d1; height: 108px">
+    <p id="banner-description">Students at ISSOS will enjoy a wide range of exciting evening programs.</p>
+</div>
+
+<div class="container-fluid" style="background: #fff;">
+    <div class="row" style="margin-top: 35px; margin-left: 25px">
+            <a href=""><button class="btn btn-primary btn-md">APPLY ONLINE</button></a>
+            <a href="FAQ.html"> <button class="btn btn-primary btn-md">ASK A QUESTION?</button></a>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row" style=" margin-left: 25px">
+        <h2 style="font: normal 45px 'Lato', Verdana, sans-serif">Evening Entertainment</h2>
+        <h4 class="text">All students at ISSOS take part in each evening program and it is a great chance to hang out with friends, discover a new talent or learn a new skill. Some evening programs are ISSOS clan events and are designed to foster friendships, good sportsmanship and teamwork.  We make sure all evening programs are full of fun and laughter.</h4>
+        <img src="img/even.jpg" style="width: 95%" alt="">
+        <br>
+        <h2 style="font: normal 45px 'Lato', Verdana, sans-serif">Evening Programs</h2>
+        <ul style="line-height: 180%; font-size: 18px">
+            <li>Group night</li>
+            <li>Guest Speakers Debate</li>
+            <li>Scottish Country Dancing</li>
+            <li>Home Work Night</li>
+            <li>Counselor Fashion Show</li>
+            <li>Variety Show</li>
+            <li>Choice Night</li>
+        </ul>
+        <h2 style="font: normal 45px 'Lato', Verdana, sans-serif">Clan Evening Programs</h2>
+        <ul style="line-height: 180%; font-size: 18px">
+            <li>Clan Calling</li>
+            <li>Dodgeball</li>
+            <li>Ultimate Frisbee</li>
+            <li>Mini Olympics</li>
+            <li>Urban Orienteering</li>
+            <li>Danish Longball</li>
+
+        </ul>
+        <h2 style="font: normal 45px 'Lato', Verdana, sans-serif">Final Week Evening Programs</h2>
+        <ul style="line-height: 180%; font-size: 18px">
+            <li>Creative Night</li>
+            <li>ISSOS Awards</li>
+            <li>Final Night Debate</li>
+            <li>The Dance</li>
+        </ul>
+
+        <hr class="hr">
+        <div>
+            <button class="btn btn-primary btn-md">APPLY ONLINE</button>
+            <a href="FAQ.html"><button class="btn btn-primary btn-md">ASK A QUESTION</button></a>
+        </div>
+        <br>
+    </div>
+</div>
+
+<!--CTA2 start-->
+<div class="cta2" style="background: #e7e7e7; padding: 0px; ">
+    <div class="container" >
+        <div class="col-md-3 col-sm-6">
+            <h1 style="text-transform: uppercase; font-family: courier new;"  class="advanced-chunk-title">Academics</h1>
+            <ul style="margin-bottom: 20px;">
+                <li style="text-align: left; list-style: none;">
+                    <p><a href="english.html">English Language</a></p>
+                    <p><a href="debate.html">Debate</a></p>
+                    <p><a href="leader.html">Youth Leadership</a></p>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-3 col-sm-6" >
+            <h1 style="text-transform: uppercase; font: normal 17px; font-family: courier new" class="advanced-chunk-title">Electives</h1>
+            <ul style="margin-bottom: 20px;">
+                <li style="text-align: left; list-style: none;">
+                    <p><a href="tennis.html">Tennis</a></p>
+                    <p><a href="photo.html">Photography</a></p>
+                    <p><a href="film.html">Film</a></p>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <h1 style="text-transform: uppercase; font: normal 17px; font-family: courier new" class="advanced-chunk-title">Activities</h1>
+            <ul style="margin-bottom: 20px;">
+                <li style="text-align: left; list-style: none;">
+                    <p><a href="trips.html">Day trips</a></p>
+                    <p><a href="entertainment.html">Evening entertainment</a></p>
+                    <p><a href="games.html">Highland games</a></p>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <h1 style="text-transform: uppercase; font: normal 17px; font-family: courier new" class="advanced-chunk-title">Navigation</h1>
+            <ul style="margin-bottom: 20px;">
+                <li style="text-align: left; list-style: none;">
+                    <p><a href="#">Home</a></p>
+                    <p><a href="#">About us</a></p>
+                    <p><a href="#">News</a></p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--CTA2 END-->
+
+<!--FOOTER START-->
+<footer class="footer section-padding" style="background: url(./img/footer.jpg); position: relative; background-size: cover;">
+    <div class="container">
+        <a href="index.html"> <img style="padding-top: 20px; padding-bottom: 20px; width: 150px; margin-left: 40%" src="img/n1.png"></a>
+        <div class="social-icons" >
+            <div class="col-md-12 col-xs-12 " >
+                <a style="color: white;" class="item fa fa-map" href="#"><b style="font-size: 20px;">Our Brochure</b></a>
+                <a style="color: white;" class="item fa fa-camera" href="#"><b style="font-size: 20px;">Photo Gallery</b></a>
+                <a style="color: white;" class="item fa fa-play-circle" href="#"><b style="font-size: 20px;">Video Gallery</b></a>
+                <a style="color: white;" class="item fa fa-shopping-bag" href="#"><b style="font-size: 20px;">Merchandise</b></a>
+                <a style="color: white;" class="item fa fa-calendar" href="#"><b style="font-size: 20px;">Date & Costs</b></a>
+                <hr>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--FOOTER END-->
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel" style="text-align: center; font-size: 35px; font-family: 'Poiret One', cursive; ">English at Nazarbayev University</h5>
+
+            </div>
+            <div class="modal-body">
+                <iframe style="margin-left: 0; width: 870px" width="900" height="500" src="https://www.youtube.com/embed/JzjvrlWV1Gw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.easing.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.mixitup.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/slick.min.js"></script>
+<script type="text/javascript" src="js/custom.js"></script>
+<script src="contactform/contactform.js"></script>
+
+
+</body>
