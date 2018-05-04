@@ -50,7 +50,7 @@
         }
 
         #banner-description {
-            font: 700 20px 'Lato', sans-serif;
+            /*font: 700 20px 'Lato', sans-serif;*/
             text-align: center;
             color: #fff;
             font-size: 20px;
@@ -59,12 +59,12 @@
         #FAQ {
             text-align: center;
             text-transform: uppercase;
-            font-family: 'Poiret One', cursive;
-            font-size: 5.5em;
+            /*font-family: 'Poiret One', cursive;*/
+            font-size: 4.5em;
             color: #ffffff;
         }
         #banner-description1 {
-            font: 700 20px 'Lato', sans-serif;
+            /*font: 20px 'Lato', sans-serif;*/
             text-align: left;
             color: #fff;
             margin-top: 35px;
@@ -135,46 +135,18 @@
             color: #ffffff
         }
 
+        .font  {
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+
 
     </style>
 
 </head>
-<!--<script>
-    function failed(e) {
-        // video playback failed - show a message saying why
-        switch (e.target.error.code) {
-            case e.target.error.MEDIA_ERR_ABORTED:
-                alert('You aborted the video playback.');
-                break;
-            case e.target.error.MEDIA_ERR_NETWORK:
-                alert('A network error caused the video download to fail part-way.');
-                break;
-            case e.target.error.MEDIA_ERR_DECODE:
-                alert('The video playback was aborted due to a corruption problem or because the video used features your browser did not support.');
-                break;
-            case e.target.error.MEDIA_ERR_SRC_NOT_SUPPORTED:
-                alert('The video could not be loaded, either because the server or network failed or because the format is not supported.');
-                break;
-            default:
-                alert('An unknown error occurred.');
-                break;
-        }
-    }
-</script>-->
 
-<!--<script>
-    $(document).ready(function() { // Ждём загрузки страницы
-        $(".tabs_menu li").click(function() { // Событие нажатия на элемент меню вкладок
-            if (!$(this).hasClass("active")) { // Проверка, не нажали ли мы на уже активный пункт
-                var i = $(this).index(); // Получаем порядковый номер нажатого пункта, отстче идет от 0 (0,1,2)
-                $(".tabs_menu li.active").removeClass("active"); // Удаляем активный класс у прошлого пункта меню
-                $(".tabs .active").hide().removeClass("active"); // Скрываем и удаляем активный класс у прошлого контейнера с содержимым
-                $(this).addClass("active"); // Добавляем нажатому пункту меню активный класс
-                $($(".tabs").children(".info")[i]).fadeIn(1000).addClass("active"); // Показываем и добавляем активный класс соответствующему контейнеру
-            }
-        });
-    });
-</script>-->
+
+
 
 <body>
 <!--HEADER START-->
@@ -238,19 +210,18 @@
 </div>
 <!--BANNER END-->
 
-<div class="container-fluid" style="background-color: #35c6d1; height: 200px">
+<div class="container-fluid" style="background-color: #333434; height: 200px; font-family: 'Libre Baskerville',serif;">
     <h3 id="FAQ">DO YOU HAVE A QUESTION?</h3>
     <p id="banner-description">A member of our admissions staff will respond to all enquiries within twenty-four hours. Depending on the nature of the enquiry one of our staff may contact you by phone, so please provide a contact number.</p>
 </div>
 
 
 <div class="container-fluid">
-    <div class="row" style=" margin-left: 25px; margin-bottom: 35px">
-        <h2 style="font: normal 45px 'Lato', Verdana, sans-serif; margin-bottom: 15px">Please get in touch</h2>
-        <h5 style="font: normal 25px 'Lato', Verdana, sans-serif; margin-bottom: 15px">Call +7 701 662 72 17</h5>
-        <h5 style="font: normal 25px 'Lato', Verdana, sans-serif; margin-bottom: 15px">Email <a href="info@ifss.kz">info@ifss.kz</a></h5>
-        <h5 style="font: normal 25px 'Lato', Verdana, sans-serif; margin-bottom: 15px">Weekends: Please note the office is closed at weekends, all enquiries and phone calls received over the weekend will be responded to ASAP on our return</h5>
-
+    <div class="row" style=" margin-left: 25px; margin-bottom: 35px;font-family: 'Libre Baskerville',serif">
+            <h2 style="font-size: 45px">Please get in touch</h2>
+            <h5 class="font" >Call +7 701 662 72 17</h5>
+            <h5 class="font" >Email <a href="info@ifss.kz">info@ifss.kz</a></h5>
+            <h5 class="font" >Weekends: Please note the office is closed at weekends, all enquiries and phone calls received over the weekend will be responded to ASAP on our return</h5>
     </div>
 </div>
 
@@ -258,9 +229,9 @@
 
 <div class="container-fluid">
     <div class="row" style=" margin-left: 25px; margin-bottom: 35px">
-        <h2 style="font: normal 45px 'Lato', Verdana, sans-serif; margin-bottom: 15px">Or send an enqiry</h2>
+        <h2 style="font-family: 'Libre Baskerville',serif; font-size: 40px; margin-bottom: 15px">Or send an enqiry</h2>
 
-        <form class="form-horizontal" action="/action_page.php" style="width: 50%">
+        <form class="form-horizontal" id="form" style="width: 50%">
             <div class="form-group">
                 <label class="control-label col-sm-2" for="email">First name:</label>
                 <div class="col-sm-10">
@@ -299,14 +270,7 @@
             </div>
             <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-10">
-                    <div class="checkbox">
-                        <label><input type="checkbox" name="remember"> Remember me</label>
-                    </div>
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="col-sm-offset-2 col-sm-10">
-                    <button type="submit" class="btn btn-default">Submit</button>
+                    <button type="submit" class="btn btn-default">Send</button>
                 </div>
             </div>
         </form>
@@ -318,7 +282,7 @@
 
 
 <!--CTA2 start-->
-<div class="cta2" style="background: #e7e7e7; padding: 0; ">
+<div class="cta2" style="background: #e7e7e7; padding: 0;font-family: 'Libre Baskerville',serif ">
     <div class="container" >
         <div class="col-md-3 col-sm-6">
             <h1 style="text-transform: uppercase; font-family: courier new;"  class="advanced-chunk-title">Academics</h1>
@@ -387,7 +351,8 @@
 </footer>
 <!--FOOTER END-->
 
-
+<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="js/common.js"></script>
 
 <!--<script src="js/jquery.min.js"></script>
 <script src="js/jquery.easing.min.js"></script>

@@ -181,8 +181,9 @@ a.btn-banner:hover, a.btn-banner:focus
 }
 .cta-1, .cta2
 {
-	background-color: #35c6d1;
-	padding: 40px 0px;
+	/*background-color: #35c6d1;*/
+	background-color: #333434;
+	padding: 40px 0;
 }
 p.cta-sub-title
 {
@@ -457,7 +458,7 @@ margin-top: 5px;
 }
 #banner
 {
-    background: url('../img/banner1.jpg') no-repeat;
+    background: url('../img/111.jpg') no-repeat;
     background-size: cover;
     min-height: 670px;
     height: 100%;
@@ -641,6 +642,12 @@ form element
 
 /*OUR PARTNERS*/
 
+.slick-track{
+    opacity: 1;
+    width: 720px;
+    transform: translate3d(0px, 0px, 0px);
+}
+
 h2{
     text-align:center;
     padding: 20px;
@@ -648,7 +655,7 @@ h2{
 /* Slider */
 
 .slick-slide {
-    margin: 0px 20px;
+    margin: 0 20px;
 }
 
 .slick-slide img {
@@ -697,6 +704,9 @@ h2{
     -ms-transform: translate3d(0, 0, 0);
     -o-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
+
+
+    margin: 0 auto;
 }
 
 .slick-track

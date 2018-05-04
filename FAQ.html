@@ -139,42 +139,8 @@
     </style>
 
 </head>
-<script>
-    function failed(e) {
-        // video playback failed - show a message saying why
-        switch (e.target.error.code) {
-            case e.target.error.MEDIA_ERR_ABORTED:
-                alert('You aborted the video playback.');
-                break;
-            case e.target.error.MEDIA_ERR_NETWORK:
-                alert('A network error caused the video download to fail part-way.');
-                break;
-            case e.target.error.MEDIA_ERR_DECODE:
-                alert('The video playback was aborted due to a corruption problem or because the video used features your browser did not support.');
-                break;
-            case e.target.error.MEDIA_ERR_SRC_NOT_SUPPORTED:
-                alert('The video could not be loaded, either because the server or network failed or because the format is not supported.');
-                break;
-            default:
-                alert('An unknown error occurred.');
-                break;
-        }
-    }
-</script>
 
-<script>
-    $(document).ready(function() { // Ждём загрузки страницы
-        $(".tabs_menu li").click(function() { // Событие нажатия на элемент меню вкладок
-            if (!$(this).hasClass("active")) { // Проверка, не нажали ли мы на уже активный пункт
-                var i = $(this).index(); // Получаем порядковый номер нажатого пункта, отстче идет от 0 (0,1,2)
-                $(".tabs_menu li.active").removeClass("active"); // Удаляем активный класс у прошлого пункта меню
-                $(".tabs .active").hide().removeClass("active"); // Скрываем и удаляем активный класс у прошлого контейнера с содержимым
-                $(this).addClass("active"); // Добавляем нажатому пункту меню активный класс
-                $($(".tabs").children(".info")[i]).fadeIn(1000).addClass("active"); // Показываем и добавляем активный класс соответствующему контейнеру
-            }
-        });
-    });
-</script>
+
 
 <body>
 <!--HEADER START-->
@@ -238,7 +204,7 @@
 </div>
 <!--BANNER END-->
 
-<div class="container-fluid" style="background-color: #35c6d1; height: 200px">
+<div class="container-fluid" style="background-color: #333434; height: 200px; font-family: 'Libre Baskerville', Serif">
     <h3 id="FAQ">FREQUENTLY ASKED <b>question</b></h3>
     <p id="banner-description">If you have any questions not answered below, please get in touch.</p>
     <div class="row text-center">
@@ -247,9 +213,9 @@
 </div>
 
 
-<div class="container-fluid">
+<div class="container-fluid" style="font-family: 'Libre Baskerville',serif">
     <div class="row" style=" margin-left: 25px; margin-bottom: 35px">
-        <h2 style="font: normal 45px 'Lato', Verdana, sans-serif; margin-bottom: 15px">Important information</h2>
+        <h2 style="margin-bottom: 15px">Important information</h2>
         <div class="col-sm-6">
             <h3 style="color: darkred">Dates and Cost</h3>
             <h4>This year’s program is scheduled from June 16 to July 7, 2018. Cost of the summer school is $1,500 USD. It covers: tuition, accommodation, meals, course materials and equipment; trips and excursions; evening activities and cultural events; airport transfers from and to Nazarbayev International Airport (TSE), Astana, Kazakhstan. There is an enrollment fee of 200$. Please note that your place at IFSS will not be confirmed until  the enrolment fee has been received.</h4>
@@ -341,7 +307,7 @@
 
 
 <!--CTA2 start-->
-<div class="cta2" style="background: #e7e7e7; padding: 0; ">
+<div class="cta2" style="background: #e7e7e7; padding: 0; font-family: 'Libre Baskerville',serif">
     <div class="container" >
         <div class="col-md-3 col-sm-6">
             <h1 style="text-transform: uppercase; font-family: courier new;"  class="advanced-chunk-title">Academics</h1>

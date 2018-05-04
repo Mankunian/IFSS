@@ -50,16 +50,17 @@
         }
 
         #banner-description {
-            font: 700 20px 'Lato', sans-serif;
+            /*font:  20px 'Lato', sans-serif;*/
             text-align: center;
             color: #fff;
             font-size: 20px;
+
         }
 
         #FAQ {
             text-align: center;
             text-transform: uppercase;
-            font-family: 'Poiret One', cursive;
+            /*font-family: 'Poiret One', cursive;*/
             font-size: 5.5em;
             color: #ffffff;
         }
@@ -113,6 +114,7 @@
         .text {
             line-height: 180%;
             text-align: left;
+            font-family:  'Libre Baskerville', serif
         }
 
         .hr {
@@ -120,9 +122,9 @@
             border: none;
             clear: both;
             height: 1px;
-            margin: 2em 0;
+            margin: 0.8em 0;
             padding: 0;
-            width: 90%;
+            width: 100%;
         }
         .button {
             border-radius: 50px;
@@ -139,44 +141,9 @@
     </style>
 
 </head>
-<script>
-    function failed(e) {
-        // video playback failed - show a message saying why
-        switch (e.target.error.code) {
-            case e.target.error.MEDIA_ERR_ABORTED:
-                alert('You aborted the video playback.');
-                break;
-            case e.target.error.MEDIA_ERR_NETWORK:
-                alert('A network error caused the video download to fail part-way.');
-                break;
-            case e.target.error.MEDIA_ERR_DECODE:
-                alert('The video playback was aborted due to a corruption problem or because the video used features your browser did not support.');
-                break;
-            case e.target.error.MEDIA_ERR_SRC_NOT_SUPPORTED:
-                alert('The video could not be loaded, either because the server or network failed or because the format is not supported.');
-                break;
-            default:
-                alert('An unknown error occurred.');
-                break;
-        }
-    }
-</script>
 
-<script>
-    $(document).ready(function() { // Ждём загрузки страницы
-        $(".tabs_menu li").click(function() { // Событие нажатия на элемент меню вкладок
-            if (!$(this).hasClass("active")) { // Проверка, не нажали ли мы на уже активный пункт
-                var i = $(this).index(); // Получаем порядковый номер нажатого пункта, отстче идет от 0 (0,1,2)
-                $(".tabs_menu li.active").removeClass("active"); // Удаляем активный класс у прошлого пункта меню
-                $(".tabs .active").hide().removeClass("active"); // Скрываем и удаляем активный класс у прошлого контейнера с содержимым
-                $(this).addClass("active"); // Добавляем нажатому пункту меню активный класс
-                $($(".tabs").children(".info")[i]).fadeIn(1000).addClass("active"); // Показываем и добавляем активный класс соответствующему контейнеру
-            }
-        });
-    });
-</script>
 
-<body>
+<body class="font">
 <!--HEADER START-->
 <div class="main-navigation navbar-fixed-top">
     <nav class="navbar navbar-default" style="padding-bottom: 7px">
@@ -235,17 +202,10 @@
 
 <!--BANNER START-->
 <div id="banner1" class="section-padding">
-    <!--<div class="container-fluid">
-        <div class="row">
-            <div class="jumbotron">
-                <h1 id="jumbotron" style="font-family: 'Poiret One', cursive;" class="small">ACTIVITIES <br><span style="font-family: 'Archivo Black', sans-serif; " class="bold">Day trips</span></h1>
-            </div>
-        </div>
-    </div>-->
 </div>
 <!--BANNER END-->
 
-<div class="container-fluid" style="background-color: #35c6d1; height: 200px">
+<div class="container-fluid" style="background-color: #333434; height: 200px;font-family: 'Libre Baskerville', serif;">
     <h3 id="FAQ">About us</h3>
     <p id="banner-description">
         IFSS offers 13 to 18 year olds a balanced summer experience of academia, fun and culture, where students can learn within an encouraging and supportive environment while having fun and making new friends from around the world.
@@ -254,8 +214,8 @@
 
 
 <div class="container-fluid">
-    <div class="row" style=" margin-left: 25px; margin-bottom: 35px">
-        <h2 style="font: normal 45px 'Lato', Verdana, sans-serif; margin-bottom: 15px">About IFSS</h2>
+    <div class="row" style=" margin-left: 25px; margin-bottom: 35px;font-family:  'Libre Baskerville', serif">
+        <h2 style=" margin-bottom: 15px">About IFSS</h2>
         <h4 class="text">IFSS was created with one clear mission in mind: To create an ecosystem for people to unleash their potential. As such, we provide a well balanced, supervised summer program where students choose academic and elective classes to suit their needs and wider interests. We offer our students the opportunity to have the summer adventure of a lifetime where the focus is on personal safety and wellbeing, quality individual instruction and a unique international experience.</h4>
         <h4 class="text">The location of our summer school has been carefully chosen for its safe, stimulating and inspirational campus. Young and modern Nazarbayev University allows students to experience life at this exclusive university, within a secure environment. By attending IFSS, students have the opportunity to experience the Astana – heart of the Eurasia and home of pink flamingos.</h4>
         <h4 class="text">IFSS endeavor to deliver the highest quality programs in the safest location led by an inspirational team. We welcome students from all over the World and create an international family where friendships span the world and last long beyond the summer»</h4>
@@ -264,8 +224,8 @@
     <!--<iframe style="margin-left: 12%;" width="70%" height="450px"   src="https://www.youtube.com/embed/JzjvrlWV1Gw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>-->
     <hr class="hr">
 
-    <div class="col-md-10">
-        <h2 style="font: normal 45px 'Lato', Verdana, sans-serif; margin-bottom: 15px">What Makes IFSS Different?</h2>
+    <div class="col-md-12" style="font: normal 45px 'Libre Baskerville', serif ">
+        <h2 style="margin-bottom: 15px">What Makes IFSS Different?</h2>
         <ul style="line-height: 180%; font-size: 18px">
             <li>We welcome students from all over the world</li>
             <li>Beautiful, safe and world renowned locations</li>
@@ -275,24 +235,17 @@
             <li>IFSS gives students the edge when applying to university</li>
 
         </ul>
-        <!--<div style="margin-left: 15px">
-            <a href="mission.html"> <button class="btn btn-primary btn-md">Our mission & values</button></a>
-            <a href="FAQ.html"> <button class="btn btn-primary btn-md">Our founder at tedx</button></a>
-        </div>-->
         <hr class="hr">
     </div>
 
 
 
-    <div class="col-md-10">
-        <h2 style="font: normal 45px 'Lato', Verdana, sans-serif; margin-bottom: 15px">Our Team </h2>
+    <div class="col-md-12" style="font-family: 'Libre Baskerville', Serif">
+        <h2 style="margin-bottom: 15px">Our Team </h2>
         <h4 class="text">We strive for high-quality program and have selected a strong team consisting of The Princeton Review Certified Trainers, students and alumni of top Kazakhstan and U.S. schools, such as Nazarbayev University, Eurasian National University, Stanford, Duke, MIT, Williams College, Pennsylvania StateUniversity and University of Wisconsin-Madison. There is a staff student ratio of 1:12 and classes are intentionally kept small in order to provide individual attention and personalized instruction.</h4>
         <h4 class="text">As well as providing high quality academic standards for our summer students, our teachers are also dormitory residents and are backed up by counselors who act as role models and provide pastoral care. The success of our summer programs rests on the dedication and enthusiasm of our teachers and counselors and their common goal of making IFSS a truly unique and exciting experience for every student.</h4>
         <h4 class="text">We also have an amazing full time head office team who spend the year making sure that IFSS really is The Experience of a Lifetime.</h4>
-        <!--<div>
-            <a href="FAQ.html"> <button class="btn btn-primary btn-md">Meet the teem</button></a>
-        </div>-->
-        <!--<hr class="hr">-->
+
     </div>
 
 
@@ -317,7 +270,6 @@
     <hr class="hr">
     <div>
         <a target="_blank" href="https://docs.google.com/a/fizmat.kz/forms/d/12tJDlYFGEC_wJeSUxGujFoRiKz2HFCECuLtj9tZnf3g/edit?usp=drive_web"><button class="btn btn-primary btn-md">APPLY ONLINE</button></a>
-        <!--<a href="FAQ.html"> <button class="btn btn-primary btn-md">ASK A QUESTION</button></a>-->
     </div>
     <br>
 </div>
@@ -342,9 +294,9 @@
                 <li style="text-align: left; list-style: none;">
                     <p><a href="#">Equestrian </a></p>
                     <p><a href="#">Archery</a></p>
-                    <p><a href="film.html">Theatre</a></p>
+                    <p><a href="#">Theatre</a></p>
                     <p><a href="#">Public Speaking</a></p>
-                    <p><a href="tennis.html">Tennis</a></p>
+                    <p><a href="#">Tennis</a></p>
                 </li>
             </ul>
         </div>
