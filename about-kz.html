@@ -18,7 +18,12 @@
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">
 
+
     <style>
+        body{
+            font-family: 'Libre Baskerville', serif;;
+
+        }
         .hero {
             position: absolute;
             top: 50%;
@@ -40,6 +45,7 @@
             font-weight: bold;
             margin: 0;
             padding: 0;
+            font-family: 'Libre Baskerville', serif;
         }
 
         /********************************/
@@ -73,13 +79,17 @@
         /********************************/
         .fade-carousel .slides .slide-1
         {
-            height: 75vh;
+            height: 870px;
             background-size: cover !important;
             background-position: 50% 50% !important;
             background-repeat: no-repeat;
         }
         .fade-carousel .slides .slide-1 {
             background-image: url(img/kz.jpg)
+        }
+        .hymn{
+            margin-top: 100px;
+            margin-bottom: 100px;
         }
     </style>
 </head>
@@ -101,20 +111,56 @@
             </div>
             <div class="hero">
                 <hgroup>
-                    <div class="col-md-6">
-                        <div class="text">
-                            <h2>Welcome to Kazakhstan</h2>
-                            <h4 style="text-align: justify;line-height: 1.5;">It is not necessary to search the entire world for fascinating tradition, beautiful, pristine nature or a delicate mixture of old and modern: simply visit Kazakhstan. In Kazakhstan, guests are made welcome as they experience the very heart of Eurasia.</h4>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="text" style="font-family: 'Libre Baskerville', serif;">
+                                    <h2 style="margin-bottom: 35px; font-weight: 600;">Welcome to Kazakhstan</h2>
+                                    <h4 style="text-align: justify;line-height: 1.8; font-size: 16px">It is not necessary to search the entire world for fascinating tradition, beautiful, pristine nature or a delicate mixture of old and modern: simply visit Kazakhstan. In Kazakhstan, guests are made welcome as they experience the very heart of Eurasia.</h4>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="video">
+                                    <iframe width="600" height="350" src="https://www.youtube.com/embed/kpNAZYrjs5U" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
-
-                    </div>
                 </hgroup>
-                <button class="btn btn-hero btn-lg" role="button">See all features</button>
             </div>
         </div>
     </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="about" style="text-align: left; margin-top: 100px; margin-bottom: 100px">
+                <h2 style="font-size: 3.5em">About Kazakhstan</h2>
+                <h4 style="line-height: 1.68421053em">The Republic of Kazakhstan, situated at the heart of Eurasia, appeared on the geopolitical map in 1991. The name Kazakh, of Turkic origin, is thought to mean “free man” – which is appropriate in a land historically populated by freedom-loving nomads.
+                    For thousands of years, these nomads tended vast cattle herds, pasture lands and the fertile soils of the region’s foothills and river valleys. Both the historic Silk Road and Sable Route, along which expensive furs were transported, passed through the region. This made Kazakhstan an important cultural, trade and economic bridge between Asia and Europe.</h4>
+            </div>
+        </div>
+    </div>
+
+   <div class="bn" style="background: #fafafa">
+       <div class="container">
+           <div class="row">
+              <div class="hymn">
+                  <div class="col-sm-4 col-md-4">
+                      <h3 style="font-size: 22px; margin-bottom: 40px">
+                          The Land of Many Nationalities
+                      </h3>
+                      <h4 style="line-height:1.68421053em; font-size: 1.35714286em ">
+                          Kazakhstan is home to many different nationalities and faiths, all united by a common history. This variety of tradition, heritage and language is treasured by the people of the Republic of Kazakhstan, who believe there is much truth in the Japanese saying: “You can survive without your relatives; you cannot survive without your neighbours.” The people of Kazakhstan are proud of their diversity. Century after century, generation after generation, Kazakhstan has always sought to encourage friendship and tolerance among its people.
+                      </h4>
+                  </div>
+                  <div class="col-sm-4 col-md-4">
+                      <img src="img/112.jpg" alt="">
+                  </div>
+                  <div class="col-sm-4 col-md-4"></div>
+              </div>
+           </div>
+       </div>
+   </div>
 </div>
 </body>
 </html>
