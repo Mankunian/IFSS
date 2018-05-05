@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>About-kz</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,600|Raleway:600,300|Josefin+Slab:400,700,600italic,600,400italic' rel='stylesheet' type='text/css'>
@@ -19,41 +19,10 @@
     <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">
 
     <style>
-
-        /*
- Fade content bs-carousel with hero headers
- Code snippet by maridlcrmn (Follow me on Twitter @maridlcrmn) for Bootsnipp.com
- Image credits: unsplash.com
- */
-
-        /********************************/
-        /*       Fade Bs-carousel       */
-        /********************************/
-        .fade-carousel {
-            position: relative;
-            height: 100vh;
-        }
-        .fade-carousel .carousel-inner .item {
-            height: 100vh;
-        }
-        .fade-carousel .carousel-indicators > li {
-            margin: 0 2px;
-            background-color: #f39c12;
-            border-color: #f39c12;
-            opacity: .7;
-        }
-        .fade-carousel .carousel-indicators > li.active {
-            width: 10px;
-            height: 10px;
-            opacity: 1;
-        }
-
-        /********************************/
-        /*          Hero Headers        */
-        /********************************/
         .hero {
             position: absolute;
             top: 50%;
+            width: 80%;
             left: 50%;
             z-index: 3;
             color: #fff;
@@ -71,23 +40,6 @@
             font-weight: bold;
             margin: 0;
             padding: 0;
-        }
-
-        .fade-carousel .carousel-inner .item .hero {
-            opacity: 0;
-            -webkit-transition: 2s all ease-in-out .1s;
-            -moz-transition: 2s all ease-in-out .1s;
-            -ms-transition: 2s all ease-in-out .1s;
-            -o-transition: 2s all ease-in-out .1s;
-            transition: 2s all ease-in-out .1s;
-        }
-        .fade-carousel .carousel-inner .item.active .hero {
-            opacity: 1;
-            -webkit-transition: 2s all ease-in-out .1s;
-            -moz-transition: 2s all ease-in-out .1s;
-            -ms-transition: 2s all ease-in-out .1s;
-            -o-transition: 2s all ease-in-out .1s;
-            transition: 2s all ease-in-out .1s;
         }
 
         /********************************/
@@ -119,28 +71,16 @@
         /********************************/
         /*       Slides backgrounds     */
         /********************************/
-        .fade-carousel .slides .slide-1,
-        .fade-carousel .slides .slide-2,
-        .fade-carousel .slides .slide-3 {
-            height: 100vh;
-            background-size: cover;
-            background-position: center center;
+        .fade-carousel .slides .slide-1
+        {
+            height: 75vh;
+            background-size: cover !important;
+            background-position: 50% 50% !important;
             background-repeat: no-repeat;
         }
         .fade-carousel .slides .slide-1 {
-            background-image: url(img/kz.jpg);
-
-
-        /********************************/
-        /*          Media Queries       */
-        /********************************/
-        @media screen and (min-width: 980px){
-            .hero { width: 980px; }
+            background-image: url(img/kz.jpg)
         }
-        @media screen and (max-width: 640px){
-            .hero h1 { font-size: 4em; }
-        }
-
     </style>
 </head>
 
@@ -151,10 +91,7 @@
     <!-- Overlay -->
 
     <!-- Indicators -->
-    <ol class="carousel-indicators">
-        <li data-target="#bs-carousel" data-slide-to="0" class="active"></li>
 
-    </ol>
 
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
@@ -164,8 +101,15 @@
             </div>
             <div class="hero">
                 <hgroup>
-                    <h1>We are creative</h1>
-                    <h3>Get start your next awesome project</h3>
+                    <div class="col-md-6">
+                        <div class="text">
+                            <h2>Welcome to Kazakhstan</h2>
+                            <h4 style="text-align: justify;line-height: 1.5;">It is not necessary to search the entire world for fascinating tradition, beautiful, pristine nature or a delicate mixture of old and modern: simply visit Kazakhstan. In Kazakhstan, guests are made welcome as they experience the very heart of Eurasia.</h4>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+
+                    </div>
                 </hgroup>
                 <button class="btn btn-hero btn-lg" role="button">See all features</button>
             </div>
