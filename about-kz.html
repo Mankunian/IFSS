@@ -18,11 +18,55 @@
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">
 
+    <!--<link rel="stylesheet" type="text/css" href="css/normalize.css" />-->
+    <!--<link rel="stylesheet" type="text/css" href="css/demo.css" />-->
+    <link rel="stylesheet" type="text/css" href="css/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="css/tabstyles.css" />
+    <script src="js/modernizr.custom.js"></script>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/about-kz.js"></script>
+
 
     <style>
         body{
             font-family: 'Libre Baskerville', serif;;
 
+        }
+        .ftr{
+            color: #ffffff;
+            margin-top: 100px;
+            margin-bottom: 20px;
+        }
+        .social{
+            background: #181818;
+            height: 75px;
+        }
+        .inline li{
+            display: inline-block;
+            list-style-type: none;
+            margin-left: 9%;
+        }
+        .text-right{
+            text-align: right;
+        }
+
+        .inline{
+            margin-bottom: 50px;
+        }
+        .foot{
+            margin-bottom: 1.5em;
+            text-align: right;
+        }
+        .footer{
+            height: 30%;
+            background: #252525;
+        }
+        #img{
+            border-radius: 5px;
+            border: 1px solid #f1e5e5;
+            margin: 40px;
         }
         .hero {
             position: absolute;
@@ -89,7 +133,7 @@
         }
         .hymn{
             margin-top: 100px;
-            margin-bottom: 100px;
+            /*margin-bottom: 100px;*/
         }
     </style>
 </head>
@@ -113,15 +157,15 @@
                 <hgroup>
                     <div class="container">
                         <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-md-12 col-lg-6">
                                 <div class="text" style="font-family: 'Libre Baskerville', serif;">
                                     <h2 style="margin-bottom: 35px; font-weight: 600;">Welcome to Kazakhstan</h2>
                                     <h4 style="text-align: justify;line-height: 1.8; font-size: 16px">It is not necessary to search the entire world for fascinating tradition, beautiful, pristine nature or a delicate mixture of old and modern: simply visit Kazakhstan. In Kazakhstan, guests are made welcome as they experience the very heart of Eurasia.</h4>
                                 </div>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-12 col-lg-6">
                                 <div class="video">
-                                    <iframe width="600" height="350" src="https://www.youtube.com/embed/kpNAZYrjs5U" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                    <iframe width="550" height="350" src="https://www.youtube.com/embed/kpNAZYrjs5U" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                                 </div>
                             </div>
                         </div>
@@ -141,26 +185,374 @@
         </div>
     </div>
 
-   <div class="bn" style="background: #fafafa">
-       <div class="container">
+   <div class="bn" style="background: #f5f5f5; height: 80%">
+       <div class="container" style="margin-bottom: 100px">
            <div class="row">
               <div class="hymn">
                   <div class="col-sm-4 col-md-4">
                       <h3 style="font-size: 22px; margin-bottom: 40px">
                           The Land of Many Nationalities
                       </h3>
-                      <h4 style="line-height:1.68421053em; font-size: 1.35714286em ">
+                      <h4 style="line-height:1.68421053em; font-size: 17px ">
                           Kazakhstan is home to many different nationalities and faiths, all united by a common history. This variety of tradition, heritage and language is treasured by the people of the Republic of Kazakhstan, who believe there is much truth in the Japanese saying: “You can survive without your relatives; you cannot survive without your neighbours.” The people of Kazakhstan are proud of their diversity. Century after century, generation after generation, Kazakhstan has always sought to encourage friendship and tolerance among its people.
                       </h4>
                   </div>
                   <div class="col-sm-4 col-md-4">
-                      <img src="img/112.jpg" alt="">
+                      <img src="img/112.jpg" alt="bayterek" style="border: 1px solid #c2c0c0; width: 350px">
                   </div>
-                  <div class="col-sm-4 col-md-4"></div>
+                  <div class="col-sm-4 col-md-4">
+                      <h4 style="line-height:1.68421053em; font-size: 17px ">
+                          Currently around 130 nationalities populate Kazakhstan. Around 66% are Kazakhs, 21% are Russians and the remaining 13% constitutes Ukrainians, Uzbeks, Germans and Tartars. The predominant religions are Islam and Christianity.
+                          <br>
+                          The state language of Kazakhstan is Kazakh. However, the younger generations are becoming increasingly trilingual. Both Kazakh and Russian are used by the authorities and governing institutions of Kazakhstan. Kazakh is considered the language of the ancestors and Russian is widely spoken, while English is enjoying a growing popularity as the language most commonly used to communicate with foreign visitors.
+                      </h4>
+                  </div>
               </div>
            </div>
        </div>
    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="about" style="text-align: left; margin-top: 50px; margin-bottom: 100px">
+                <h2 style="font-size: 3.5em">Gallery</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="gallery">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-3 gallery-item">
+                    <a href="#galleryImg1" class="link-gallery" data-toggle="modal" data-target="#modalGallery">
+                        <img src="img/m4.jpg" class="img-responsive img-gallery" alt="First image">
+                    </a>
+                </div> <!-- /.col -->
+
+                <div class="col-xs-3 gallery-item">
+                    <a href="#galleryImg1" class="link-gallery" data-toggle="modal" data-target="#modalGallery">
+                        <img src="img/m6.jpg" class="img-responsive img-gallery" alt="Second image">
+                    </a>
+                </div> <!-- /.col -->
+
+                <div class="col-xs-3 gallery-item">
+                    <a href="#galleryImg1" class="link-gallery" data-toggle="modal" data-target="#modalGallery">
+                        <img src="img/m3.jpg" class="img-responsive img-gallery" alt="Third image">
+                    </a>
+                </div> <!-- /.col -->
+
+                <div class="col-xs-3 gallery-item">
+                    <a href="#galleryImg1" class="link-gallery" data-toggle="modal" data-target="#modalGallery">
+                        <img src="img/m7.jpg" class="img-responsive img-gallery" alt="Fourth image">
+                    </a>
+                </div> <!-- /.col -->
+                <div class="col-xs-3 gallery-item">
+                    <a href="#galleryImg1" class="link-gallery" data-toggle="modal" data-target="#modalGallery">
+                        <img src="img/m5.jpg" class="img-responsive img-gallery" alt="Fourth image">
+                    </a>
+                </div> <!-- /.col -->
+                <div class="col-xs-3 gallery-item">
+                    <a href="#galleryImg1" class="link-gallery" data-toggle="modal" data-target="#modalGallery">
+                        <img src="img/m2.jpg" class="img-responsive img-gallery" alt="Fourth image">
+                    </a>
+                </div> <!-- /.col -->
+                <div class="col-xs-3 gallery-item">
+                    <a href="#galleryImg1" class="link-gallery" data-toggle="modal" data-target="#modalGallery">
+                        <img src="img/m1.jpg" class="img-responsive img-gallery" alt="Fourth image">
+                    </a>
+                </div> <!-- /.col -->
+                <div class="col-xs-3 gallery-item">
+                    <a href="#galleryImg1" class="link-gallery" data-toggle="modal" data-target="#modalGallery">
+                        <img src="img/m0.jpg" class="img-responsive img-gallery" alt="Fourth image">
+                    </a>
+                </div> <!-- /.col -->
+            </div> <!--/.row  -->
+        </div> <!-- /.container -->
+    </div> <!-- /.gallery -->
+
+    <div class="modal fade" id="modalGallery" tabindex="-1" role="dialog" aria-labelledby="modalGalleryLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title" id="modalGalleryLabel">Gallery</h4>
+                </div> <!-- /.modal-header -->
+
+                <div class="modal-body">
+                    <div id="carouselGallery" class="carousel slide" data-ride="carousel" data-interval="false">
+                        <div class="carousel-inner">
+                        </div> <!-- /.carousel-inner -->
+                    </div> <!-- /.carousel -->
+                </div> <!-- /.modal-body -->
+
+                <div class="modal-footer">
+                    <ul class="pagination">
+                    </ul>
+                </div> <!-- /.modal-footer -->
+            </div> <!-- /.modal-content -->
+        </div> <!-- /.modal-dialog -->
+    </div> <!-- /.modal -->
+
+    <div class="container">
+        <div class="row">
+            <div class="about" style="text-align: left; margin-top: 50px; margin-bottom: 100px">
+                <h2 style="font-size: 3em">National symbols of the republic of Kazakhstan
+                </h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4 col-md-4">
+                <div class="border" style="padding: 1.5em; border: 1px solid #ececec">
+                <div class="img" style="margin:50px">
+                    <img src="img/e1.png" alt="" style="width: 250px">
+                </div>
+                <h3 style="text-align: center">NATIONAL FLAG OF THE REPUBLIC OF KAZAKHSTAN</h3>
+                <hr>
+                <h4 style="line-height:1.68421053em; font-size: 15px; text-align: justify ">
+                    Flag is one of the main symbols of the state that represents its sovereignty and identity. The Russian term “flag” for Flag comes from the Dutch word “vlag” and means cloth of officially adopted size and colour and commonly with an image of emblem (coat of arms).
+                    The Flag of sovereign Kazakhstan was officially adopted in 1992. It was designed by Shaken Niyazbekov.
+                    The State Flag of the Republic of Kazakhstan is a rectangular breadth of blue colour with the image of the sun in its center with a soaring steppe eagle underneath. Along the flagstaff there is a vertical band with the national ornamental patterns. The images of the sun, rays, eagle and ornament are of golden colour. The ratio of the Flag’s width to its length: 1:2.                    </h4>
+                </div>
+            </div>
+            <div class="col-sm-4 col-md-4">
+                <div class="border" style="padding: 1.5em; border: 1px solid #ececec">
+                <div class="img">
+                    <img src="img/e2.png" alt="" style="width: 200px; margin-left: 50px">
+                </div>
+                <h3 style="text-align: center">NATIONAL EMBLEM OF THE REPUBLIC OF KAZAKHSTAN</h3>
+                <hr>
+                <h4 style="line-height:1.68421053em; font-size: 15px; text-align: justify ">
+                    The Emblem is one of the main symbols of the state. The Russian term “gerb” for Emblem comes from the German word “Erbe” (legacy) and means hereditary distinctive sign that represents a combination of figures and objects to which a symbolic sense reflecting cultural and historical traditions of the state is given.
+                    The history is an evidence of the fact that the nomads of the Bronze Age that inhabited the territory of modern Kazakhstan identified themselves with a special symbol which is called totem. Its graphical expression further got the name “tamga”. This term has been for the first time used in the Turkic Khaganate.
+                    The Emblem of the sovereign Kazakhstan was officially adopted in 1992. The authors of the State Emblem are Kazakhstan’s famous architects Zhandarbek Malibekov and Shot-Aman Ualikhanov.                </div>
+            </div>
+            <div class="col-sm-4 col-md-4">
+                <div class="border" style="padding: 1.5em; border: 1px solid #ececec">
+                <div class="img">
+                    <img src="img/e3.png" alt="" style="width: 200px; margin-left: 50px">
+                </div>
+                <h3 style="text-align: center">NATIONAL ANTHEM OF THE REPUBLIC OF KAZAKHSTAN</h3>
+                    <p><b>Text</b>: Nursultan Nazarbayev, Zhumeken Nazhimedenov </p>
+                    <p><b>Composer:</b> Shamshi Kaldayakov</p>
+                <hr>
+                <h4 style="line-height:1.68421053em; font-size: 15px; text-align: center ">
+                    Sky of golden sun, <br>
+                    Steppe of golden seed, <br>
+                    Legend of courage - <br>
+                    Take a look at my country!<br>
+                    From the antiquity<br>
+                    Our heroic glory emerged,<br>
+                    They did not give up their pride<br>
+                    My Kazakh people are strong!<br>
+
+                    Chorus: My country, my country,<br>
+                    As your flower I will be planted,<br>
+                    As your song I will stream, my country!<br>
+                    My native land – My Kazakhstan!<br>
+
+                    The way was opened to the posterity<br>
+                    I have a vast land.<br>
+                    Its unity is proper,<br>
+                    I have an independent country.<br>
+                    It welcomed the time<br>
+                    Like an eternal friend,<br>
+                    Our country is happy,<br>
+                    Such is our country.
+            </div>
+        </div>
+    </div>
+
 </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="about" style="text-align: left; margin-top: 50px; margin-bottom: 100px">
+                <h2 style="font-size: 3em">National meals of Kazakh nationality</h2>
+                <h4 style="text-align: center;line-height: 1.68421053em">KAZAKH SPECIALTIES ARE MEAT AND SOUR-MILK DISHES: besbarmak (meat and noodles), kazy, karta, shuzhuk, zhal, zhaya (types of horsemeat sausage), baursaks (savory dоughnuts), kurt (a hard curd chess), kozhe (milk soup), irimshik (curds) and airan (a уоghurt drink).</h4>
+            </div>
+        </div>
+        <div class="row">
+            <section>
+                <div class="tabs tabs-style-linetriangle">
+                    <nav>
+                        <ul>
+                            <li><a href="#section-linetriangle-1"><span>KUURDAK</span></a></li>
+                            <li><a href="#section-linetriangle-2"><span>KAZY</span></a></li>
+                            <li><a href="#section-linetriangle-3"><span>BESHPARMAK</span></a></li>
+                            <li><a href="#section-linetriangle-4"><span>KUMYS</span></a></li>
+                            <li><a href="#section-linetriangle-5"><span>BAURSAKS</span></a></li>
+                        </ul>
+                    </nav>
+                    <div class="content-wrap">
+                        <section id="section-linetriangle-1">
+                            <div class="col-md-6">
+                                <h2>KUURDAK</h2>
+                                <span>KUURDAK (offal stew) - is a Central Asian dish which may sound exotic and complicated but it is really easy to prepare. It basically involves sautéing meat, potato and onions. With so few ingredients the quality of the ingredients becomes particularly important. Red meat is more commonly used but there is no rule against using chicken! Sometimes Kuurdak is made with innards such as intestines.</span>
+                            </div>
+                            <div class="col-md-6">
+                               <div id="img">
+                                   <img src="img/54.jpg" alt="">
+                               </div>
+                            </div>
+                        </section>
+                        <section id="section-linetriangle-2">
+                            <div class="col-md-6">
+                                <h2>KAZY</h2>
+                                <span>KAZY is a common element on a dastarkhan, a table set for a festive meal. A smoked horse-meat sausage, is a particularly popular delicacy.</span>
+                            </div>
+                            <div class="col-md-6">
+                                <div>
+                                    <img src="img/55.jpg" alt="kazy" style="width: 420px; margin: 25px; border: 1px solid #f1e5e5; border-radius: 5px">
+                                </div>
+                            </div>
+                        </section>
+                        <section id="section-linetriangle-3">
+                            <div class="col-md-6">
+                                <h2>BESHPARMAK</h2>
+                                <span>BESBARMAK - the national kazakh dish,the term Beshbarmak means "five fingers", because the dish is eaten with one's hands. The boiled meat is usually diced with knives, often mixed with boiled noodles, and garnished with parsley and coriander.</span>
+                            </div>
+                            <div class="col-md-6">
+                                <div>
+                                    <img src="img/57.jpg" alt="beshparmak" style="width: 420px; margin: 40px;">
+                                </div>
+                            </div>
+                        </section>
+                        <section id="section-linetriangle-4">
+                            <div class="col-md-6">
+                                <h2>KUMYS</h2>
+                                <span>KUMYS - the national drink is made by fermenting raw unpasteurized mare's milk over the course of hours or days, often while stirring or churning. (The physical agitation has similarities to making butter). During the fermentation, lactobacilli bacteria acidify the milk, and yeasts turn it into a carbonated and mildly alcoholic drink.</span>
+                            </div>
+                            <div class="col-md-6">
+                                <div>
+                                    <img src="img/56.jpg" alt="beshparmak" style="width: 350px; margin: 40px; border: 1px solid #f1e5e5; border-radius: 5px">
+                                </div>
+                            </div>
+                        </section>
+                        <section id="section-linetriangle-5">
+                            <div class="col-md-6">
+                                <h2>BAURSAKS</h2>
+                                <span>
+                                    BAURSAKS (savoury doughnuts) - are must-have food in every Kazakh family. Now, baursaks are not only cooked and eaten by the Kazakhs. Baursaks are served to tea, before main course, to mare’s milk (‘kumys’), to snacks, and to strong broth (‘sorpa’). It is both festive and everyday food liked by many, both young and old.
+                                </span>
+                            </div>
+                            <div class="col-md-6">
+                                <div>
+                                    <img src="img/58.jpg" alt="baursak" style="width: 350px; margin: 25px; border: 1px solid #f1e5e5; border-radius: 5px">
+                                </div>
+                            </div>
+                        </section>
+                    </div><!-- /content -->
+                </div><!-- /tabs -->
+            </section>
+        </div>
+    </div>
+
+    <div class="bn" style="background: #f5f5f5; height: 80%">
+        <div class="container" style="margin-bottom: 100px">
+            <div class="row">
+                <div class="hymn">
+                    <div class="col-md-5 col-sm-5">
+                           <div class="foot">
+                               <h3 class="text-rigth">Street Abylaikhana 1/1
+                                   <br>
+                                   Kaskelen, Kazakhstan
+                               </h3>
+                               <br>
+                               <h4>
+                                   Email: <a href="mailto:infomatrix@sdu.edu.kz">infomatrix@sdu.edu.kz</a>
+                               </h4>
+                               <br>
+                               <h4>
+                                   Give us a call or drop by anytime, we endeavour to answer all enquiries within 24 hours on business days.
+                               </h4>
+                               <br>
+                               <h4><a href="#">Bank Account</a></h4>
+                               <h4><a href="#">Directions to SDU from Almaty</a></h4>
+                           </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <ul class="inline">
+                        <li><h2>Sponsors:</h2></li>
+                        <li><img src="img/daryn.png" alt="" style="width: 110px"></li>
+                        <li><img src="img/sdulogo.png" alt="" style="width: 140px"></li>
+                        <li><img src="img/engsdu.png" alt="" style="width: 200px"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-md-6">
+                    <div class="ftr">
+                        <h5>PAGES</h5>
+                        <br>
+                        <p><a href="">HOME PAGE</a></p>
+                        <p><a href="">ABOUT KAZAKHSTAN</a></p>
+                        <p><a href="">RULES</a></p>
+                        <p><a href="">FAQS</a></p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-6">
+                    <div class="ftr">
+                        <h5>CONTACTS</h5>
+                        <br>
+                        <h5>Address: Street Abylaikhana 1/1, Kaskelen, Kazakhstan </h5>
+                        <h5>Email: <a href="mailto:infomatrix@sdu.edu.kz">infomatrix@sdu.edu.kz</a> </h5>
+                        <br>
+                       <h2></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="social">
+        <div class="container">
+            <div class="row">
+                <div style="margin-top: 22px">
+                    <div class="col-sm-6">
+                        <span>2018 Infomatrix Team.</span>
+                        <a href="#">Terms</a>
+                    </div>
+                    <div class="col-sm-6 text-right">
+                        <ul class="list-inline">
+                            <li><a href="https://www.youtube.com/watch?v=IPfJnp1guPc"><i style="font-size:24px" class="fa">&#xf16a;</i></a></li>
+                            <li><a href="https://vk.com/feed"><i style="font-size:24px" class="fa">&#xf189;</i></a></li>
+                            <li><a href="https://www.facebook.com/"><i style="font-size:24px" class="fa">&#xf09a;</i></a></li>
+                            <li><a href="https://www.instagram.com/?hl=ru"><i style="font-size:24px" class="fa">&#xf16d;</i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
+
+<script src="js/cbpFWTabs.js"></script>
+<script>
+    (function() {
+
+        [].slice.call( document.querySelectorAll( '.tabs' ) ).forEach( function( el ) {
+            new CBPFWTabs( el );
+        });
+
+    })();
+</script>
 </body>
 </html>
+
